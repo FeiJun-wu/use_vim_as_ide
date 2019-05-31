@@ -37,14 +37,14 @@ nmap <Leader>Q :qa!<CR>
 " 设置快捷键遍历子窗口
 " 依次遍历
 nnoremap nw <C-W><C-W>
-" 跳转至右方的窗口
-nnoremap <Leader>lw <C-W>l
-" 跳转至方的窗口
-nnoremap <Leader>hw <C-W>h
-" 跳转至上方的子窗口
-nnoremap <Leader>kw <C-W>k
 " 跳转至下方的子窗口
-nnoremap <Leader>jw <C-W>j
+nnoremap <C-J> <C-W><C-J>
+" 跳转至上方的子窗口
+nnoremap <C-K> <C-W><C-K>
+" 跳转至右方的窗口
+nnoremap <C-L> <C-W><C-L>
+" 跳转至left的窗口
+nnoremap <C-H> <C-W><C-H>
 
 " 定义快捷键在结对符之间跳转
 nmap <Leader>M %
@@ -107,7 +107,7 @@ Plugin 'gcmt/wildfire.vim'
 Plugin 'sjl/gundo.vim'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'suan/vim-instant-markdown'
-Plugin 'lilydjwg/fcitx.vim'
+"Plugin 'lilydjwg/fcitx.vim'
 
 " 插件列表结束
 call vundle#end()
@@ -116,9 +116,10 @@ filetype plugin indent on
 
 " 配色方案
 set background=dark
-colorscheme solarized
+"colorscheme solarized
 "colorscheme molokai
 "colorscheme phd
+colorscheme gruvbox
 
 " >>
 " 营造专注气氛
@@ -161,7 +162,7 @@ set number
 
 " 高亮显示当前行/列
 set cursorline
-set cursorcolumn
+"set cursorcolumn
 
 " 高亮显示搜索结果
 set hlsearch
@@ -234,7 +235,7 @@ set nofoldenable
 " 接口与实现快速切换
 
 " *.cpp 和 *.h 间切换
-nmap <silent> <Leader>sw :FSHere<cr>
+nmap <silent> <F2> :FSHere<cr>
 
 " <<
 
@@ -457,11 +458,11 @@ nmap <Leader>man :Man 3 <cword><CR>
 " 工程文件浏览
 
 " 使用 NERDTree 插件查看工程文件。设置快捷键，速记：file list
-nmap <Leader>fl :NERDTreeToggle<CR>
+nmap <F4> :NERDTreeToggle<CR>
 " 设置 NERDTree 子窗口宽度
-let NERDTreeWinSize=22
+let NERDTreeWinSize=30
 " 设置 NERDTree 子窗口位置
-let NERDTreeWinPos="right"
+let NERDTreeWinPos="left"
 " 显示隐藏文件
 let NERDTreeShowHidden=1
 " NERDTree 子窗口中不显示冗余帮助信息
