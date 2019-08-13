@@ -57,6 +57,10 @@ flags = [
     '.', 
     '-isystem', 
     '/usr/include/', 
+    '/usr//local/include/', 
+    '/usr/include/x86_64-linux-gnu/', 
+    '/usr/include/c++/7/', 
+    '/usr/include/c++/7/bits', 
 ]
 
 

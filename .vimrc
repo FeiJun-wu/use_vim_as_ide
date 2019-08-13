@@ -175,8 +175,9 @@ set hlsearch
 " 设置 gvim 显示字体
 set guifont=YaHei\ Consolas\ Hybrid\ 10.5
 
-" 禁止折行
-set nowrap
+" 折行
+set wrap
+set textwidth=70
 
 " 设置状态栏主题风格
 let g:Powerline_colorscheme='solarized256'
@@ -235,7 +236,7 @@ set nofoldenable
 " 接口与实现快速切换
 
 " *.cpp 和 *.h 间切换
-nmap <silent> <F2> :FSHere<cr>
+nmap <silent> <Leader>h :FSHere<cr>
 
 " <<
 
@@ -432,6 +433,7 @@ let g:ycm_cache_omnifunc=0
 
 " 语法关键字补全
 let g:ycm_seed_identifiers_with_syntax=1
+let g:ycm_global_ycm_extra_conf='~/.ycm_extra_conf.py'
 
 " <<
  
